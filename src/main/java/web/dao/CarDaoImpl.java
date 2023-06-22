@@ -2,7 +2,7 @@ package web.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import web.Model.Car;
+import web.model.Car;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ public class CarDaoImpl implements CarDao {
     }
 
     @Override
-    public List<Car> returnCount(Integer countCars) {
+    public List<Car> getCarsByCount(Integer countCars) {
         List<Car> list = getCars();
         if (countCars == null || countCars < 0 || countCars > list.size()) {
             countCars = list.size();
